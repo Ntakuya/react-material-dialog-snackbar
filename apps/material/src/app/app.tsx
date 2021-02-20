@@ -1,15 +1,16 @@
 import React from 'react';
 import Button from './components/button';
-
+import { Provider } from "react-redux"
+import { store } from "./store"
 import DialogcontextProvider from './contexts/dialog-contextt';
 
 const App = () => (
-  <div>
+  <Provider store={store}>
     <DialogcontextProvider>
       <div>sample</div>
       <Button />
     </DialogcontextProvider>
-  </div>
+  </Provider>
 )
 
 export default App
