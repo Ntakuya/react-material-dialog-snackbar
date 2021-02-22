@@ -122,6 +122,13 @@
             "jestConfig": "libs/api/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "generate": {
+          "executor": "@nrwl/workspace:run-commands",
+          "outputs": [],
+          "options": {
+            "command": "node_modules/.bin/openapi-generator-cli generate -g typescript-axios -i libs/api/swagger.json -o libs/api/src --api-package=api --model-package=model --additional-properties=withSeparateModelsAndApi=true"
+          }
         }
       }
     }

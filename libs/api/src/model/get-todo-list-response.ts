@@ -12,6 +12,18 @@
  * Do not edit the class manually.
  */
 
-export * from './api';
-export * from './configuration';
-export * from './model';
+import { TodoEntity } from './todo-entity';
+
+/**
+ *
+ * @export
+ * @interface GetTodoListResponse
+ */
+export interface GetTodoListResponse {
+  /**
+   *
+   * @type {Array<TodoEntity>}
+   * @memberof GetTodoListResponse
+   */
+  todoes: Array<TodoEntity>;
+}

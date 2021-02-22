@@ -12,6 +12,22 @@
  * Do not edit the class manually.
  */
 
-export * from './api';
-export * from './configuration';
-export * from './model';
+/**
+ *
+ * @export
+ * @interface UpdateTodoDto
+ */
+export interface UpdateTodoDto {
+  /**
+   *
+   * @type {string}
+   * @memberof UpdateTodoDto
+   */
+  title: string;
+  /**
+   *
+   * @type {string}
+   * @memberof UpdateTodoDto
+   */
+  description: string;
+}
