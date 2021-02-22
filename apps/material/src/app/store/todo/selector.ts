@@ -1,10 +1,10 @@
-import { createDraftSafeSelector } from "@reduxjs/toolkit"
-import { RootReducer } from "../reducer"
-import { featureName, TodoState } from "./slice"
-import { getSelectors } from "./adapter"
+import { createDraftSafeSelector } from '@reduxjs/toolkit';
+import { RootReducer } from '../reducer';
+import { featureName, TodoState } from './slice';
+import { getSelectors } from './adapter';
 
-const selectTodoSelector = state => state[featureName]
+const selectTodoSelector = (state) => state[featureName];
 
-export const {
-    selectAll: selectAllTodo
-} = getSelectors<TodoState>(selectTodoSelector)
+export const { selectAll: selectAllTodo } = getSelectors<TodoState>(
+  selectTodoSelector
+);

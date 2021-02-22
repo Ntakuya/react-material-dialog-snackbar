@@ -1,9 +1,6 @@
-import { createEntityAdapter } from "@reduxjs/toolkit";
-import { Todo } from "../../interafces/todo";
+import { createEntityAdapter } from '@reduxjs/toolkit';
+import { Todo } from '../../interafces/todo';
 
-const todoAdapter = createEntityAdapter<Todo>()
+const todoAdapter = createEntityAdapter<Todo>();
 
-export const {
-    getInitialState,
-    getSelectors
-} = todoAdapter
+export const { getInitialState, getSelectors } = todoAdapter;

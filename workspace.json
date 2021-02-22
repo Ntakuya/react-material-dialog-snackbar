@@ -1,8 +1,6 @@
 {
   "version": 2,
-  "cli": {
-    "defaultCollection": "@nrwl/react"
-  },
+  "cli": { "defaultCollection": "@nrwl/react" },
   "defaultProject": "material",
   "generators": {
     "@nrwl/react": {
@@ -11,13 +9,8 @@
         "linter": "eslint",
         "babel": true
       },
-      "component": {
-        "style": "styled-components"
-      },
-      "library": {
-        "style": "styled-components",
-        "linter": "eslint"
-      }
+      "component": { "style": "styled-components" },
+      "library": { "style": "styled-components", "linter": "eslint" }
     }
   },
   "projects": {
@@ -70,13 +63,9 @@
         },
         "serve": {
           "executor": "@nrwl/web:dev-server",
-          "options": {
-            "buildTarget": "material:build"
-          },
+          "options": { "buildTarget": "material:build" },
           "configurations": {
-            "production": {
-              "buildTarget": "material:build:production"
-            }
+            "production": { "buildTarget": "material:build:production" }
           }
         },
         "lint": {
@@ -108,15 +97,30 @@
             "devServerTarget": "material:serve"
           },
           "configurations": {
-            "production": {
-              "devServerTarget": "material:serve:production"
-            }
+            "production": { "devServerTarget": "material:serve:production" }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"] }
+        }
+      }
+    },
+    "api": {
+      "root": "libs/api",
+      "sourceRoot": "libs/api/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": { "lintFilePatterns": ["libs/api/**/*.{ts,tsx,js,jsx}"] }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/api"],
           "options": {
-            "lintFilePatterns": ["apps/material-e2e/**/*.{js,ts}"]
+            "jestConfig": "libs/api/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }
