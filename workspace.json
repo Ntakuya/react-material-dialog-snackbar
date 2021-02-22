@@ -127,7 +127,7 @@
           "executor": "@nrwl/workspace:run-commands",
           "outputs": [],
           "options": {
-            "command": "node_modules/.bin/openapi-generator-cli generate -g typescript-axios -i libs/api/swagger.json -o libs/api/src --api-package=api --model-package=model --additional-properties=withSeparateModelsAndApi=true"
+            "command": "node_modules/.bin/openapi-generator-cli generate -g typescript-axios -i libs/api-request/swagger.json -o libs/api-request/src/open-api --api-package=api --model-package=model --additional-properties=withSeparateModelsAndApi=true"
           }
         }
       }
