@@ -1,6 +1,6 @@
 import { createEntityAdapter } from '@reduxjs/toolkit';
-import { Todo } from '../../interafces/todo';
+import { TodoEntity } from "@react-material-dialog-snackbar/api"
 
-const todoAdapter = createEntityAdapter<Todo>();
+const todoAdapter = createEntityAdapter<TodoEntity>();
 
-export const { getInitialState, getSelectors } = todoAdapter;
+export const { getInitialState, getSelectors, upsertMany, upsertOne } = todoAdapter;
